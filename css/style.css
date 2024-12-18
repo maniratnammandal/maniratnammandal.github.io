@@ -143,7 +143,15 @@ section{
 #home {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    /* height: 100vh; */
+}
+
+@media (min-width:768px){
+  #home {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+  }
 }
 
 .home-bg {
@@ -645,7 +653,7 @@ Main components
       margin-right: 5px;
     }
     .timeline-content-info-title {
-      width: calc(50% - 10px);
+      width: calc(50% - 3px);
       display: inline-block;
     }
     .timeline-content-info-date{
@@ -654,6 +662,7 @@ Main components
       text-align: right;
       /* padding-right: 5px; */
     }
+
     @media (max-width: 500px) {
       .timeline-content-info-title {
         display: block;
@@ -664,6 +673,23 @@ Main components
         width:100%;
         text-align: right;
       }
+    }
+  }
+
+  @media (max-width: 1920px) {
+    @media (min-width: 1200px) {
+      .timeline-content-info {
+        font-size: 10px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+
+    .timeline-content-info {
+      /* font-size: 10px; */
+      font-size: 1.5rem;
     }
   }
 
@@ -702,6 +728,14 @@ Main components
   /* font-size: 13px; */
   font-size: 1.5rem !important;
 }
+
+@media (max-width: 1920px) {
+  @media (min-width: 1200px) {
+    .cd-timeline-content p {
+      font-size: 1.3rem !important;
+    }
+  }
+}
 .cd-timeline-content .cd-date {
   display: inline-block;
 }
@@ -721,10 +755,21 @@ Main components
   border-right: 7px solid var(--second-bg-color);
 }
 
+@media only screen and (max-width: 500px) {
+  .cd-timeline-content h2 {
+    /* font-size: 20px; */
+    font-size: 2rem;
+  }
+  .cd-timeline-content p {
+    /* font-size: 16px; */
+    font-size: 0.75rem;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
     font-size: 20px;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
   .cd-timeline-content p {
     font-size: 16px;
@@ -1025,8 +1070,6 @@ Main components
     font-size:  1.6rem;
     margin: .7rem 0 1rem;
 }
-
-
 
 
 .portfolio-box .portfolio-layer {

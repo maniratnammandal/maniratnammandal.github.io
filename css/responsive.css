@@ -1,3 +1,5 @@
+
+
 @media (max-width: 1200px){
 
     html{
@@ -11,14 +13,129 @@
     .home{
         justify-content: center;
         flex-direction: column;
-        height: 100vh;
+        /* height: 100vh; */
     }
-    .home-img img{
-        width: 600px;
-        height: auto;
-        margin-top: 8rem;
-        object-fit: cover;
+
+    .cv-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        background: var(--accent-color);
+        color: var(--primary-color) !important;
+        border: transparent;
+        border-radius: 50%;
+        font-size: 2rem;
+        margin: 3rem 1.5rem 3rem 0;
+        transition: .5s ease;
+        visibility: visible !important; /* Override any hidden property */
+        white-space: nowrap; /* Prevent wrapping */
+        overflow: visible; /* Ensure it does not get clipped */
+        z-index: 10; /* Ensure it appears on top */
+      }
+
+    @media (max-width:768px){
+
+        .home-img img{
+            width: 100%;
+            height: auto;
+            margin-top: 8rem;
+            object-fit: cover;
+        }
+
+        .interests-education {
+          display: flex;
+          flex-direction: column; /* Stack elements vertically */
+          width: 100%;
+          height:auto;
+          justify-content: space-between;
+          gap: 3rem; /* Space between Interests and Education sections */
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          background: var(--second-bg-color);
+          padding: 2rem;
+          border-radius: 8px;
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+          /* animation: fadeInContent 1s ease-in-out forwards 1.5s; */
+        }
+
+        .interests-education{
+
+          .interests h2, .education-section h2 {
+            font-size: 2.4rem;
+
+          }
+
+          .interests ul {
+            font-size: 1.6rem;
+            line-height: 2;
+          }
+
+
+          .education-item i {
+            font-size: 2.5rem; /* Graduation icon size */
+          }
+
+          .education-details h3 {
+            font-size: 1.7rem;
+          }
+
+          .education-details p {
+            font-size: 1.4rem;
+          }
+        }
     }
+
+
+    @media (max-width: 1200px) {
+
+        .cd-timeline-content {
+          color: white;
+          margin-left: 0;
+          padding: 1.6em;
+          /* font-size: 1.75rem; */
+          width: 80%; /* Keeps content blocks consistent */
+          margin-left: 20px; /* Reduce this value to move closer to the center line */
+          margin-right: 20px; /* Reduce for right-aligned blocks */
+          margin: 0 5%
+        }
+        .cd-timeline-content::before {
+          top: 24px;
+          left: 100%;
+          border-color: transparent;
+          border-left-color: var(--second-bg-color);
+        }
+        .cd-timeline-content .cd-date {
+          position: absolute;
+          width: 100%;
+          left: 122%;
+          top: 6px;
+          font-size: 16px;
+          font-size: 1rem;
+        }
+
+        /* Left side animation */
+        .cd-timeline-block:nth-child(odd) .cd-timeline-content.animated {
+            animation: slideInFromRight 1s ease-in-out forwards;
+        }
+
+        /* Right side animation */
+        .cd-timeline-block:nth-child(even) .cd-timeline-content.animated {
+            animation: slideInFromRight 1s ease-in-out forwards;
+        }
+
+        .cd-timeline-block:nth-child(even) .cd-timeline-content {
+          float: right;
+          /* animation: slideInFromRight 1s ease-in-out forwards; */
+        }
+        .cd-timeline-block:nth-child(odd) .cd-timeline-content {
+          float: right;
+          /* animation: slideInFromRight 1s ease-in-out forwards; */
+        }
+
+    }
+
 
     .portfolio-box .layer1{
         display: flex;
@@ -189,7 +306,7 @@
 
     .home{
         flex-direction: column;
-        height: 100vh;
+        /* height: 100vh; */
     }
 
     .home-img img{
@@ -354,7 +471,29 @@
     }
 }
 
-@media (max-width: 450px){
+@media (max-width:500px){
+
+  .portfolio-layer0 h4{
+      font-size:  1rem;
+  }
+
+  .portfolio-layer0 p{
+      font-size:  1rem;
+      margin: .7rem 0 1rem;
+  }
+}
+
+@media (max-width:500px){
+  .cd-timeline-content h2 {
+    /* font-size: 20px; */
+    font-size: 2rem;
+  }
+  .cd-timeline-content p {
+    /* font-size: 16px; */
+    font-size: 1.25rem !important;
+}
+
+@media (max-width: 400px){
     html{
         font-size: 50%;
     }
@@ -364,10 +503,17 @@
         margin-right:-300px;
     }*/
 
-    .home{
-        height: 100vh;
+    .home-content{
+        margin top: 200px;
+        /* height: 100vh; */
     }
 
+    @media (max-height: 700px){
+      .home-content{
+          /* margin top: 200px; */
+          height: 100vh;
+      }
+    }
     .contact form .input-box input{
         width: 100%;
     }
@@ -380,9 +526,9 @@
 }
 
 @media (max-width: 365px){
-    .home-img img{
+    /* .home-img img{
         width: 90vw;
-    }
+    } */
 
     .footer{
         flex-direction: column-reverse;
