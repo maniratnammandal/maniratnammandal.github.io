@@ -1,0 +1,395 @@
+@media (max-width: 1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    section{
+        min-height: 50vh;
+        padding: 10rem 9% 2rem ;
+    }
+    .home{
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .home-img img{
+        width: 600px;
+        height: auto;
+        margin-top: 8rem;
+        object-fit: cover;
+    }
+
+    .portfolio-box .layer1{
+        display: flex;
+    }
+
+    .portfolio-box .portfolio-layer {
+        display: none;
+    }
+
+    .portfolio-box .portfolio-layer0 {
+        padding: 1.4rem;
+    }
+
+    .portfolio-layer0 h4{
+        font-size:  1.6rem;
+    }
+
+    .portfolio-layer0 p{
+        font-size:  1.4rem;
+        margin: .3rem 0 1rem;
+    }
+
+
+    .portfolio-box .layer1 {
+        padding: 1.4rem;
+    }
+
+
+    .research-box .layer1{
+        display: flex;
+    }
+
+    .research-box .research-layer {
+        display: none;
+    }
+
+    .research-box .research-layer0 {
+        padding: 1.4rem;
+    }
+
+    .research-layer0 h4{
+        font-size:  1.6rem;
+    }
+
+    .research-layer0 p{
+        font-size:  1.4rem;
+        margin: .3rem 0 1rem;
+    }
+
+
+    .research-box .layer1 {
+        padding: 1.4rem;
+    }
+
+
+    .layer1 a{
+        font-size: 1.2rem;
+    }
+
+    .layer1 a:hover{
+        cursor: pointer;
+    }
+
+    /*all buttons and clicky bits===========*/
+    .btn{
+        display: inline-block;
+        padding: 1rem 2.8rem;
+        background: var(--accent-color);
+        border-radius: 4rem;
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        letter-spacing: .1rem;
+        font-weight: 600;
+        margin: 3rem 1.5rem 3rem 0;
+        transition: .5s ease-in-out;
+    }
+
+    .btn:hover {
+        box-shadow: none;
+    }
+
+
+    .contact form .btn{
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+
+    .contact form button{
+        margin-top: 2rem;
+        cursor: pointer;
+        display: inline-block;
+        padding: 1rem 2.8rem;
+        background: var(--accent-color);
+        border-radius: 4rem;
+        font-size: 1.6rem;
+        color: var(--primary-color);
+        letter-spacing: .1rem;
+        font-weight: 600;
+        margin: 3rem 1.5rem 3rem 0;
+        transition: .5s ease-in-out;
+    }
+
+    .contact form button:hover{
+        box-shadow: none;
+    }
+
+    .social-media a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        background: var(--accent-color);
+        color: var(--primary-color);
+        border: transparent;
+        border-radius: 50%;
+        font-size: 2rem;
+        color: var(--accent-color);
+        margin: 3rem 1.5rem 3rem 0;
+        transition: .5s ease;
+    }
+    .social-media a i{
+        font-size: 2.4rem;
+        color: var(--primary-color);
+    }
+
+    .footer-iconTop {
+        display: flex;
+        align-items: center;
+        pointer-events: auto;
+    }
+
+
+    .footer-iconTop a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: .8rem;
+        background: var(--accent-color);
+        border-radius: 50%;
+    }
+    .footer-iconTop a:hover{
+        box-shadow: 0 0 2rem var(--shadow);
+    }
+
+    .footer-iconTop a i{
+        font-size: 2.4rem;
+        color: var(--primary-color);
+    }
+
+
+
+
+}
+
+@media (max-width: 991px){
+
+
+    .header{
+        padding: 2rem 3%;
+    }
+
+
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .home{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .home-img img{
+        width: 500px;
+        height: auto;
+    }
+
+    .research{
+        padding-bottom:  7rem;
+    }
+
+    .portfolio{
+        padding-bottom:  7rem;
+    }
+
+    .hobbies{
+        padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-height: auto;
+    }
+
+
+    .footer{
+        padding: 2rem 3%;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: var(--dark);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5 rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+        animation: slideIn 0.4s ease-in-out;
+
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .portfolio-box .portfolio-layer0 {
+        padding: 1.4rem;
+    }
+
+    .portfolio-layer0 h4{
+        font-size:  1.6rem;
+    }
+
+    .portfolio-layer0 p{
+        font-size:  1.4rem;
+        margin: .3rem 0 1rem;
+    }
+
+
+    .portfolio-box .portfolio-layer {
+        padding: 1.4rem;
+    }
+
+    .portfolio-layer a{
+        font-size: 1.2rem;
+    }
+
+
+    .portfolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    .research-box .research-layer0 {
+        padding: 1.4rem;
+    }
+
+    .research-layer0 h4{
+        font-size:  1.6rem;
+    }
+
+    .research-layer0 p{
+        font-size:  1.4rem;
+        margin: .3rem 0 1rem;
+    }
+
+
+    .research-box .research-layer {
+        padding: 1.4rem;
+    }
+
+    .research-layer a{
+        font-size: 1.2rem;
+    }
+
+
+    .research h2{
+        margin-bottom: 3rem;
+    }
+
+    .research-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hobbies-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+@media (max-width: 617px){
+
+    .research-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hobbies-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+/*
+    .loading-text{
+        margin-right:-300px;
+    }*/
+
+    .home{
+        height: 100vh;
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+
+    .home-img img{
+        width: 75vw;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 365px){
+    .home-img img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
