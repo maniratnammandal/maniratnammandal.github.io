@@ -32,8 +32,13 @@ window.onscroll = () => {
 
     /*==================== sticky navbar ====================*/
     let header = document.querySelector('header');
+    const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
 
-    header.classList.toggle('sticky', window.scrollY > 100);
+    if (isSmallScreen){
+      header.classList.toggle('sticky', window.scrollY > 1);
+    } else{
+      header.classList.toggle('sticky', window.scrollY > 100);
+    }
 
     /*==================== remove toggle icon and navbar when click navbar link (scroll) ====================*/
     menuIcon.classList.remove('bx-x');
