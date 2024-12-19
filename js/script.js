@@ -8,6 +8,20 @@ menuIcon.onclick = () => {
 
 };
 
+/*============================= Theme change ================================ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const checkbox = document.getElementById('checkbox');
+  checkbox.checked = false; // Ensure the checkbox starts unchecked
+});
+
+const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("light-mode")
+})
+
+
+
 /*==================== scroll sections active link ====================*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
