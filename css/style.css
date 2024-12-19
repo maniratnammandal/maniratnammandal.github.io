@@ -31,6 +31,7 @@
   --prtfolio-top-bottom: #020202;
   --portfolio-shadow: rgba(21, 21, 23, .8);
   --link-hover-color: #b1def5;
+  --education-color:#0b0b0;
 }
 
 
@@ -53,6 +54,7 @@
   --prtfolio-top-bottom: #020202;
   --portfolio-shadow: rgba(21, 21, 23, .8);
   --link-hover-color: #295451;
+  --education-color:#29546a;
 }
 
 
@@ -174,10 +176,12 @@ section{
 }
 
 @media (min-width:768px){
-  #home {
-      position: relative;
-      overflow: hidden;
-      height: 100vh;
+  @media (min-height:830px){
+    #home {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+      }
   }
 }
 
@@ -481,7 +485,7 @@ section{
 
 .education-details p {
   font-size: 1.6rem;
-  color: #b0b0b0; /* Lighter color for institution name */
+  color: var(--education-color); /* Lighter color for institution name */
   margin: 0;
 }
 
