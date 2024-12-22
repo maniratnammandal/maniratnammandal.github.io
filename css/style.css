@@ -422,6 +422,7 @@ section{
   text-decoration: underline;
 }
 
+/* Added for laptpops and higher resolutions */
 
 @media (min-width: 1440px) {
   @media (min-height: 1080px){
