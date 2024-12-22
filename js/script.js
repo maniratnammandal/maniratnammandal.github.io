@@ -22,6 +22,31 @@ checkbox.addEventListener("change", () => {
 
 
 
+window.addEventListener("load", function () {
+    // Select the home-content element
+    const homeContent = document.querySelector(".home-content");
+
+    // Get computed style for ::before
+    const beforeStyle = window.getComputedStyle(homeContent, "::before");
+
+    // Extract the background-image or content property
+    const backgroundImage = beforeStyle.getPropertyValue("background-image");
+    const content = beforeStyle.getPropertyValue("content");
+
+    const header = document.querySelector(".header");
+    const logoImg = header.querySelector(".logo-img");
+
+    // Check if img is present inside home-content
+    if (backgroundImage == "none" && content == "none") {
+        console.log("Image NOT loaded in home-content. Showing header logo-img.");
+
+        // header.classList.add("sticky");
+        logoImg.style.display = "block"; // Make sure logo is visible
+    }
+});
+
+
+
 /*==================== scroll sections active link ====================*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -47,12 +72,17 @@ window.onscroll = () => {
     /*==================== sticky navbar ====================*/
     let header = document.querySelector('header');
     const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+    const isWideScreen = window.matchMedia('(min-width: 1440px)').matches;
+    const isTallScreen = window.matchMedia('(min-height: 1080px)').matches;
 
-    if (isSmallScreen){
+    if (isWideScreen && isTallScreen){
+      header.classList.toggle('sticky', window.scrollY > 1);
+    } else if (isSmallScreen){
       header.classList.toggle('sticky', window.scrollY > 1);
     } else{
       header.classList.toggle('sticky', window.scrollY > 100);
     }
+
 
     /*==================== remove toggle icon and navbar when click navbar link (scroll) ====================*/
     menuIcon.classList.remove('bx-x');
