@@ -369,9 +369,9 @@ section{
   align-items: center;
 }
 
-.fa-moon {color: #f1c40f;}
+.fa-moon {color: var(--primary-color);}
 
-.fa-sun {color: #f39c12;}
+.fa-sun {color: var(--primary-color);}
 
 .checkbox-label .ball {
   background-color: var(--primary-color);
@@ -382,6 +382,7 @@ section{
   top: 2px;
   border-radius: 50%;
   transition: transform 0.2s linear;
+  box-shadow: inset 0px 5px 10px var(--dark), inset 0px -5px 10px var(--toggle-background);
 }
 
 /* Default state: Ball on the left */
