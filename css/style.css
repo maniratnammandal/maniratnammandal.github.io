@@ -1463,6 +1463,13 @@ Main components
     border: 2px solid var(--shadow);
 }
 
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: var(--secondary-color);
+    opacity: 0.5;
+}
+
+
 .field .item{
     width: 100%;
     padding: 1.2rem;
